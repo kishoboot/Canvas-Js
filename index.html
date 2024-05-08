@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Canvas de Dibujo</title>
+</head>
+<body>
+    <div class="field">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <button onclick="Restore()">atras</button>
+            <button onclick="Clear()">Clear</button>
+
+            <div onclick= "change_color(this)"class = "color-field" style="background: red;"></div>
+            <div onclick="change_color(this)"class ="color-field" style="background: blue;"></div>
+            <div onclick="change_color(this)"class ="color-field" style="background: yellow;"></div>
+            <div onclick="change_color(this)"class ="color-field" style="background: #c508fc;"></div>
+
+            <input oninput="draw_color = this.value" type="Color" 
+                class="color-picker">
+            <input type="range" min="1" max="100" class="pen-range"
+                oninput="stroke_width = this.value">            
+       
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
